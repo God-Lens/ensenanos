@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1400" viewBox="0 0 900 1400" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="450" y1="0" x2="450" y2="1400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6F1FA"/>
+      <stop offset="1" stop-color="#C8DBEC"/>
+    </linearGradient>
+    <radialGradient id="cloudA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 320) rotate(28) scale(500 420)">
+      <stop stop-color="#F4FAFF"/>
+      <stop offset="1" stop-color="#CFE2F2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cloudB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(640 910) rotate(-12) scale(440 390)">
+      <stop stop-color="#EDF6FF"/>
+      <stop offset="1" stop-color="#C2D9EC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="1400" fill="url(#bg)"/>
+  <rect width="900" height="1400" fill="url(#cloudA)"/>
+  <rect width="900" height="1400" fill="url(#cloudB)"/>
+
+  <text x="450" y="240" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="90" letter-spacing="5" fill="#546A84">ENSÉÑANOS</text>
+  <text x="450" y="350" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="90" letter-spacing="5" fill="#546A84">A ORAR</text>
+
+  <line x1="150" y1="410" x2="750" y2="410" stroke="#94AECB" stroke-opacity="0.5"/>
+
+  <text x="450" y="495" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-style="italic" fill="#5B6E88">La oración que nace de mirar a Jesús</text>
+
+  <ellipse cx="450" cy="1080" rx="300" ry="80" fill="#B5CDE3" fill-opacity="0.45"/>
+  <text x="450" y="1120" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="120" fill="#E6F0FA" opacity="0.85">אבא</text>
+</svg>

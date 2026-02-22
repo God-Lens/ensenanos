@@ -1,0 +1,13 @@
+- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+- [x] Clarify Project Requirements.
+- [x] Scaffold the Project.
+- [x] Customize the Project.
+- [x] Install Required Extensions (no extensiones requeridas).
+- [x] Compile the Project (validación sin errores).
+- [x] Create and Run Task (no task necesaria para landing estática).
+- [x] Launch the Project (se dejan instrucciones de ejecución en README).
+- [x] Ensure Documentation is Complete.
+
+- Work through each checklist item systematically.
+- Keep communication concise and focused.
+- Follow development best practices.
