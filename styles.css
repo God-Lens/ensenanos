@@ -238,6 +238,10 @@ body {
   font-size: 16px;
 }
 
+.synopsis-cta {
+  margin-top: 16px;
+}
+
 .feature-grid {
   margin-top: 28px;
   display: grid;
@@ -322,6 +326,36 @@ body {
   font-size: 14px;
 }
 
+.consent-line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-items: start;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.consent-line input {
+  margin-top: 2px;
+}
+
+.consent-line a {
+  color: var(--text);
+}
+
+.buy-card .btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.form-feedback {
+  min-height: 18px;
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
 .contact-line {
   margin: 12px 0 0;
   color: var(--muted);
@@ -388,6 +422,10 @@ body {
   line-height: 1.08;
 }
 
+.index-cta {
+  margin-top: 16px;
+}
+
 .parts-grid {
   margin-top: 24px;
   display: grid;
@@ -435,6 +473,34 @@ body {
   margin: 10px 0 0;
   color: var(--muted);
   line-height: 1.65;
+}
+
+.legal-page {
+  width: min(960px, 100% - 48px);
+  margin: 32px auto;
+}
+
+.legal-page .section-card {
+  padding: 32px 26px;
+}
+
+.legal-page h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.08;
+}
+
+.legal-page p,
+.legal-page li {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.legal-page h2 {
+  margin: 22px 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
 }
 
 @media (max-width: 940px) {
