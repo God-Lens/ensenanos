@@ -1,4 +1,5 @@
 const { TableClient } = require("@azure/data-tables");
+const { DefaultAzureCredential } = require("@azure/identity");
 const crypto = require("crypto");
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -6,12 +7,20 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function getTableClient() {
   const connectionString = process.env.AZURE_TABLE_CONNECTION_STRING;
   const tableName = process.env.AZURE_TABLE_NAME || "NewsletterSubscribers";
+  const accountName = process.env.AZURE_TABLE_ACCOUNT_NAME;
 
-  if (!connectionString) {
+  if (connectionString) {
+    return TableClient.fromConnectionString(connectionString, tableName);
+  }
+
+  if (!accountName) {
     return null;
   }
 
-  return TableClient.fromConnectionString(connectionString, tableName);
+  const credential = new DefaultAzureCredential();
+  const endpoint = `https://${accountName}.table.core.windows.net`;
+
+  return new TableClient(endpoint, tableName, credential);
 }
 
 function hashEmail(email) {

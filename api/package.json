@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@azure/identity": "^4.8.0",
     "@azure/data-tables": "^13.3.1"
   }
 }
