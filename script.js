@@ -54,7 +54,7 @@ if (form && emailInput && consentInput && button && feedback) {
         throw new Error("No se pudo registrar tu correo en este momento.");
       }
 
-      setFeedback("¡Listo! Te avisaremos por email.");
+      setFeedback("¡Revisa tu email y confirma la suscripción para completar el alta!");
       form.reset();
       updateButtonState();
     } catch (error) {
