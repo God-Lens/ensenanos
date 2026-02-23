@@ -30,7 +30,11 @@ Si deseas, puedo integrarte de inmediato una versión optimizada de la portada y
 
 ## Captación de emails
 
-La landing envía suscripciones por `POST /api/subscribe`.
+La landing implementa double opt-in:
+
+1. `POST /api/subscribe` guarda el email en estado `pending`.
+2. Envía correo con enlace único de confirmación.
+3. `GET /api/confirm-subscription` confirma y cambia estado a `confirmed`.
 
 ### Dónde se almacenan los emails
 
@@ -40,6 +44,15 @@ En Azure Table Storage, en la tabla definida por `AZURE_TABLE_NAME` (por defecto
 
 - `AZURE_TABLE_ACCOUNT_NAME` (nombre de la cuenta de Storage)
 - `AZURE_TABLE_NAME` (opcional)
+- `PUBLIC_BASE_URL` (ej. `https://ensenanos.godlens.one`)
+
+### Variables SMTP para enviar el correo de confirmación
+
+- `SMTP_HOST`
+- `SMTP_PORT` (ej. `587` o `465`)
+- `SMTP_USER`
+- `SMTP_PASS`
+- `SMTP_FROM` (ej. `God Lens <info@godlens.one>`)
 
 Opcional de fallback:
 

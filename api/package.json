@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@azure/identity": "^4.8.0",
-    "@azure/data-tables": "^13.3.1"
+    "@azure/data-tables": "^13.3.1",
+    "nodemailer": "^6.10.1"
   }
 }
