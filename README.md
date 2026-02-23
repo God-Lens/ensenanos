@@ -38,8 +38,17 @@ En Azure Table Storage, en la tabla definida por `AZURE_TABLE_NAME` (por defecto
 
 ### Variables de entorno requeridas en Azure Static Web App
 
-- `AZURE_TABLE_CONNECTION_STRING` (connection string de la cuenta de Storage)
+- `AZURE_TABLE_ACCOUNT_NAME` (nombre de la cuenta de Storage)
 - `AZURE_TABLE_NAME` (opcional)
+
+Opcional de fallback:
+
+- `AZURE_TABLE_CONNECTION_STRING` (solo si no se usa identidad administrada)
+
+### Seguridad recomendada (aplicada)
+
+- Static Web App en plan `Standard` con identidad administrada.
+- Acceso a datos por RBAC (`Storage Table Data Contributor`) sin secretos en app settings.
 
 ### Flujo legal implementado
 
